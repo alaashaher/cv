@@ -1,0 +1,108 @@
+$color_gun_powder_approx: #3d405b;
+$color_gallery_approx: #eee;
+$color_fuscous_gray_approx: #555;
+$color_alabaster_approx: #fbfbfb;
+$color_pink_swan_approx: #bbb;
+$color_gurkha_approx: #8d9e78;
+$color_gallery_60_approx: rgba(238, 238, 238, 0.6);
+$color_japonica_approx: #e07a5f;
+$color_celeste_approx: #cdcdcd;
+
+.footer {
+  margin-top: 226px;
+
+  .contact {
+    // display: -webkit-box;
+
+    div {
+      line-height: 24px;
+    //   margin-left: 53px;
+
+      i {
+        color: $color_gurkha_approx;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 15px;
+        transition-duration: 0.3s;
+      }
+
+      span {
+        position: relative;
+        color: #8c8b8b;
+      }
+
+      span::after {
+        content: "";
+        position: absolute;
+        background: $color_japonica_approx;
+        height: 1px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        transition-duration: 0.3s;
+      }
+
+      a:hover {
+        color: $color_japonica_approx;
+
+        span::after {
+          width: 100%;
+        }
+      }
+
+      &:hover i {
+        color: $color_japonica_approx;
+      }
+    }
+  }
+
+  .follow {
+    width: 100%;
+    margin-top: 60px;
+
+    .box {
+      text-align: center;
+      vertical-align: middle;
+
+      a {
+        display: inline-block;
+        vertical-align: text-bottom;
+
+        &:hover {
+          i {
+            background: $color_japonica_approx;
+            border-radius: 5px;
+            transform: rotate(45deg) scale(0.8);
+          }
+
+          i::before {
+            transform: rotate(-45deg) scale(1.5);
+          }
+        }
+      }
+
+      i {
+        display: inline-block;
+        font-size: 30px;
+        background: $color_gurkha_approx;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        line-height: 60px;
+        color: $color_alabaster_approx;
+        margin: 0 10px 10px;
+        transition-duration: 0.3s;
+
+        &.fa::before {
+          display: block;
+        }
+      }
+
+      i::before {
+        transition-duration: 0.3s;
+      }
+    }
+  }
+}
