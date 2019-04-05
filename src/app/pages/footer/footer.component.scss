@@ -1,15 +1,20 @@
-$color_gun_powder_approx: #3d405b;
-$color_gallery_approx: #eee;
-$color_fuscous_gray_approx: #555;
-$color_alabaster_approx: #fbfbfb;
-$color_pink_swan_approx: #bbb;
-$color_gurkha_approx: #8d9e78;
-$color_gallery_60_approx: rgba(238, 238, 238, 0.6);
-$color_japonica_approx: #e07a5f;
-$color_celeste_approx: #cdcdcd;
+$main-color: #3d405b;
+$sec-color: #eee;
+$third-color: #555;
+$forth-color: #fbfbfb;
+$fifth-color: #bbb;
+$third-color: #8d9e78;
+$blur-color: rgba(238, 238, 238, 0.6);
+$oriang-color: #e07a5f;
+$ninth-color: #cdcdcd;
 
+h3 {
+  text-decoration: underline;
+  margin: 40px 0px 20px 0px;
+  color: $oriang-color;
+}
 .footer {
-  margin-top: 226px;
+  // margin-top: 226px;
 
   .contact {
     // display: -webkit-box;
@@ -17,9 +22,12 @@ $color_celeste_approx: #cdcdcd;
     div {
       line-height: 24px;
     //   margin-left: 53px;
-
+      @media screen and (max-width:767px){
+        text-align: left;
+        margin-left: 30%;    
+      }
       i {
-        color: $color_gurkha_approx;
+        color: $third-color;
         width: 20px;
         height: 20px;
         font-size: 20px;
@@ -36,7 +44,7 @@ $color_celeste_approx: #cdcdcd;
       span::after {
         content: "";
         position: absolute;
-        background: $color_japonica_approx;
+        background: $oriang-color;
         height: 1px;
         width: 0;
         bottom: 0;
@@ -45,7 +53,7 @@ $color_celeste_approx: #cdcdcd;
       }
 
       a:hover {
-        color: $color_japonica_approx;
+        color: $oriang-color;
 
         span::after {
           width: 100%;
@@ -53,7 +61,7 @@ $color_celeste_approx: #cdcdcd;
       }
 
       &:hover i {
-        color: $color_japonica_approx;
+        color: $oriang-color;
       }
     }
   }
@@ -72,7 +80,7 @@ $color_celeste_approx: #cdcdcd;
 
         &:hover {
           i {
-            background: $color_japonica_approx;
+            background: $oriang-color;
             border-radius: 5px;
             transform: rotate(45deg) scale(0.8);
           }
@@ -86,12 +94,12 @@ $color_celeste_approx: #cdcdcd;
       i {
         display: inline-block;
         font-size: 30px;
-        background: $color_gurkha_approx;
+        background: $third-color;
         width: 60px;
         height: 60px;
         border-radius: 50%;
         line-height: 60px;
-        color: $color_alabaster_approx;
+        color: $forth-color;
         margin: 0 10px 10px;
         transition-duration: 0.3s;
 

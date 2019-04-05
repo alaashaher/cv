@@ -1,29 +1,27 @@
 //colors
-$color_gun_powder_approx: #3d405b;
-$color_gallery_approx: #eee;
-$color_fuscous_gray_approx: #555;
-$color_alabaster_approx: #fbfbfb;
-$color_pink_swan_approx: #bbb;
-$color_gurkha_approx: #8d9e78;
-$color_gallery_60_approx: rgba(238, 238, 238, 0.6);
-$color_japonica_approx: #e07a5f;
-$color_celeste_approx: #cdcdcd;
+$main-color: #3d405b;
+$sec-color: #eee;
+$third-color: #555;
+$forth-color: #fbfbfb;
+$fifth-color: #bbb;
+$third-color: #8d9e78;
+$blur-color: rgba(238, 238, 238, 0.6);
+$oriang-color: #e07a5f;
+$ninth-color: #cdcdcd;
 
 //fonts
-$font_0: Ubuntu;
-$font_1: 微軟正黑體;
-$font_2: sans-serif;
+$font: sans-serif;
 
 //@extend-elements
 //original selectors
 //body, html
 %extend_1 {
   margin: 0;
-  background: $color_gallery_approx;
-  font-family: $font_0, $font_1, $font_2;
+  background: $sec-color;
+  font-family: $font;
   letter-spacing: 0.65px;
   font-size: 15px;
-  color: $color_fuscous_gray_approx;
+  color: $third-color;
   cursor: default;
 }
 
@@ -51,7 +49,7 @@ html {
 
 a {
   text-decoration: none;
-  color: $color_fuscous_gray_approx;
+  color: $third-color;
   display: block;
   //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
   transition-duration: 0.3s;
@@ -63,7 +61,7 @@ ul {
 }
 
 h3 {
-  color: $color_gun_powder_approx;
+  color: $main-color;
   margin: 10px 0;
   text-transform: uppercase;
   font-size: 18px;
@@ -76,18 +74,19 @@ h3 {
   width: 103%;
   height: 200px;
   padding: 30px 15px;
-  background: $color_gallery_60_approx;
+  background: $blur-color;
 
   >div {
     padding-bottom: 10px;
 
     &:last-of-type {
       padding-bottom: 0;
+      z-index: 2;
     }
   }
 
   .profile {
-    background: $color_gurkha_approx;
+    background: $third-color;
     padding: 30px 15px 5px;
     margin: -30px -15px 45px;
     position: relative;
@@ -95,7 +94,7 @@ h3 {
 
     .info {
       text-align: center;
-      color: $color_alabaster_approx;
+      color: $forth-color;
 
       .name {
         margin-top: 10px;
@@ -119,7 +118,7 @@ h3 {
   .profile::after {
     content: "";
     position: absolute;
-    background: $color_gurkha_approx;
+    background: $third-color;
     width: 100%;
     height: 30px;
     bottom: -15px;

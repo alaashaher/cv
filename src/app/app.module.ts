@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './pages/header/header.module';
 import { FooterModule } from './pages/footer/footer.module';
+import { WorkExperienceModule } from './pages/workExrerience/work-experience.module';
+import { SoftSkillsModule } from './pages/softSkills/softSkills.module';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,6 +17,8 @@ import { FooterModule } from './pages/footer/footer.module';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
+    WorkExperienceModule,
+    SoftSkillsModule,
     FooterModule,
     NgbModule,
     AngularFontAwesomeModule

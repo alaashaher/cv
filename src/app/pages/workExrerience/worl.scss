@@ -1,0 +1,533 @@
+$main-color: #3d405b;
+$sec-color: #eee;
+$third-color: #555;
+$forth-color: #fbfbfb;
+$fifth-color: #bbb;
+$thix-color: #8d9e78;
+$blur-color: rgba(238, 238, 238, 0.6);
+$oriang-color: #e07a5f;
+$ninth-color: #cdcdcd;
+
+
+//fonts
+$font_0: Ubuntu;
+$font_1: 微軟正黑體;
+$font_2: sans-serif;
+
+//@extend-elements
+//original selectors
+//body, html
+%extend_1 {
+	margin: 0;
+	background: $sec-color;
+	font-family: $font_0, $font_1, $font_2;
+	letter-spacing: 0.65px;
+	font-size: 15px;
+	color: $third-color;
+	cursor: default;
+}
+
+//original selectors
+//.resume .func .work ul li, .resume .func .edu ul li
+%extend_2 {
+	position: relative;
+	margin-left: 15px;
+	padding-left: 25px;
+	padding-bottom: 15px;
+}
+
+
+* {
+	outline: none;
+}
+body {
+	@extend %extend_1;
+}
+html {
+	@extend %extend_1;
+}
+a {
+	text-decoration: none;
+	color: $third-color;
+	display: block;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 0.3s;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+h3 {
+	color: $main-color;
+	margin: 10px 0;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+.resume {
+	width: 870px;
+	background: $forth-color;
+	margin: 20px auto;
+	border: 1px solid $fifth-color;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 20px -3px $fifth-color;
+	position: relative;
+	display: flex;
+	.base {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		float: left;
+		width: 225px;
+		padding: 30px 15px;
+		background: $blur-color;
+		> div {
+			padding-bottom: 10px;
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+		}
+		.profile {
+			background: $thix-color;
+			padding: 30px 15px 5px;
+			margin: -30px -15px 45px;
+			position: relative;
+			z-index: 2;
+			.info {
+				text-align: center;
+				color: $forth-color;
+				.name {
+					margin-top: 10px;
+					margin-bottom: 0;
+					font-size: 1.5em;
+					font-weight: normal;
+				}
+			}
+			.photo img {
+				width: 100%;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50%;
+			}
+		}
+		.profile::after {
+			content: "";
+			position: absolute;
+			background: $thix-color;
+			width: 100%;
+			height: 30px;
+			bottom: -15px;
+			left: 0;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: skewY(-5deg);
+			z-index: -1;
+		}
+		.contact div {
+			line-height: 24px;
+			i {
+				color: $thix-color;
+				width: 20px;
+				height: 20px;
+				font-size: 20px;
+				text-align: center;
+				margin-right: 15px;
+				//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+				transition-duration: 0.3s;
+			}
+			span {
+				position: relative;
+			}
+			span::after {
+				content: "";
+				position: absolute;
+				background: $oriang-color;
+				height: 1px;
+				width: 0;
+				bottom: 0;
+				left: 0;
+				//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+				transition-duration: 0.3s;
+			}
+			a:hover {
+				color: $oriang-color;
+				span::after {
+					width: 100%;
+				}
+			}
+			&:hover i {
+				color: $oriang-color;
+			}
+		}
+		.follow .box {
+			text-align: center;
+			vertical-align: middle;
+			a {
+				display: inline-block;
+				vertical-align: text-bottom;
+				&:hover {
+					i {
+						background: $oriang-color;
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 5px;
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: rotate(45deg) scale(0.8);
+					}
+					i::before {
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: rotate(-45deg) scale(1.5);
+					}
+				}
+			}
+			i {
+				display: inline-block;
+				font-size: 30px;
+				background: $thix-color;
+				width: 60px;
+				height: 60px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50%;
+				line-height: 60px;
+				color: $forth-color;
+				margin: 0 10px 10px;
+				//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+				transition-duration: 0.3s;
+				&.fa::before {
+					display: block;
+				}
+			}
+			i::before {
+				//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+				transition-duration: 0.3s;
+			}
+		}
+	}
+	.func {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		float: left;
+		width: 645px;
+		padding: 30px 25px;
+		> div {
+			padding-bottom: 10px;
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+		}
+		h3 {
+			//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 0.3s;
+			margin-top: 0;
+			i {
+				color: $forth-color;
+				background: $thix-color;
+				width: 42px;
+				height: 42px;
+				font-size: 20px;
+				line-height: 42px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50%;
+				text-align: center;
+				vertical-align: middle;
+				margin-right: 8px;
+				//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+				transition-duration: 0.3s;
+			}
+		}
+		.work {
+			float: left;
+			width: 42%;
+			small {
+				display: block;
+				opacity: 0.7;
+			}
+			ul {
+				li {
+					@extend %extend_2;
+					&:hover::before {
+						animation: circle 1.2s infinite;
+					}
+					&:first-of-type::before {
+						width: 10px;
+						height: 10px;
+						left: -2px;
+					}
+					&:last-of-type {
+						padding-bottom: 3px;
+					}
+					&:last-of-type::after {
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 1.5px;
+					}
+					span {
+						//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+						transition-duration: 0.3s;
+					}
+					&:hover span {
+						color: $oriang-color;
+					}
+				}
+				li::before {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 7px;
+					height: 7px;
+					border: 3px solid $main-color;
+					background: $forth-color;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 50%;
+					left: 0;
+					z-index: 1;
+				}
+				li::after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 3px;
+					height: 100%;
+					background: $main-color;
+					left: 5px;
+					top: 0;
+				}
+			}
+		}
+		.edu {
+			float: left;
+			width: 58%;
+			small {
+				display: block;
+				opacity: 0.7;
+			}
+			ul {
+				li {
+					@extend %extend_2;
+					&:hover::before {
+						animation: circle 1.2s infinite;
+					}
+					&:first-of-type::before {
+						width: 10px;
+						height: 10px;
+						left: -2px;
+					}
+					&:last-of-type {
+						padding-bottom: 3px;
+					}
+					&:last-of-type::after {
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 1.5px;
+					}
+					span {
+						//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+						transition-duration: 0.3s;
+					}
+					&:hover span {
+						color: $oriang-color;
+					}
+				}
+				li::before {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 7px;
+					height: 7px;
+					border: 3px solid $main-color;
+					background: $forth-color;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 50%;
+					left: 0;
+					z-index: 1;
+				}
+				li::after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 3px;
+					height: 100%;
+					background: $main-color;
+					left: 5px;
+					top: 0;
+				}
+			}
+		}
+		.skills-prog {
+			clear: both;
+			ul {
+				margin-left: 15px;
+				li {
+					margin-bottom: 8px;
+					display: flex;
+					align-items: center;
+					//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+					transition-duration: 0.3s;
+					&:hover {
+						color: $oriang-color;
+						.skills-bar .bar {
+							background: $oriang-color;
+							//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+							box-shadow: 0 0 0 1px $oriang-color;
+						}
+					}
+					span {
+						display: block;
+						width: 120px;
+					}
+					.skills-bar {
+						background: $ninth-color;
+						height: 2px;
+						width: calc(100% - 120px);
+						position: relative;
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 2px;
+						.bar {
+							position: absolute;
+							top: -1px;
+							height: 4px;
+							background: $thix-color;
+							//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+							box-shadow: 0 0 0 $thix-color;
+							//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+							border-radius: 5px;
+						}
+					}
+				}
+			}
+		}
+		.interests-items {
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: border-box;
+			padding: 15px;
+			width: 100%;
+			border: 1px solid $ninth-color;
+			text-align: center;
+			display: flex;
+			justify-content: space-between;
+			div {
+				display: inline-block;
+				width: 80px;
+				height: 80px;
+				&:hover {
+					i {
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: scale(1.2);
+					}
+					span {
+						color: $oriang-color;
+						//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+						transition-duration: 0.3s;
+					}
+				}
+				i {
+					font-size: 45px;
+					width: 60px;
+					height: 60px;
+					line-height: 60px;
+					color: $thix-color;
+					//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+					transition-duration: 0.3s;
+					&.guitar {
+						display: block;
+						margin: 0 auto;
+						svg {
+							width: 50px;
+							height: 50px;
+							margin-top: 5px;
+							fill: $thix-color;
+						}
+					}
+				}
+				span {
+					display: block;
+				}
+			}
+		}
+		&:hover > div {
+			//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 0.3s;
+			&:hover h3 {
+				letter-spacing: 1.6px;
+				i {
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: scale(1.2);
+				}
+			}
+			&:not(:hover) {
+				opacity: 0.5;
+			}
+		}
+		.skills-soft ul {
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
+			li {
+				position: relative;
+				&:hover {
+					span {
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: scale(1.2);
+					}
+					small {
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: scale(1.2);
+					}
+					svg .cbar {
+						stroke: $oriang-color;
+						stroke-width: 4px;
+					}
+				}
+				svg {
+					width: 95%;
+					fill: transparent;
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: rotate(-90deg);
+					circle {
+						stroke-width: 1px;
+						stroke: $ninth-color;
+					}
+					.cbar {
+						stroke-width: 3px;
+						stroke: $thix-color;
+						stroke-linecap: round;
+					}
+				}
+				span {
+					position: absolute;
+					display: block;
+					width: 100%;
+					top: 52%;
+					//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+					transition-duration: 0.3s;
+					top: 40%;
+				}
+				small {
+					position: absolute;
+					display: block;
+					width: 100%;
+					top: 52%;
+					//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+					transition-duration: 0.3s;
+				}
+			}
+		}
+	}
+}
+.resume::before {
+	content: "";
+	width: 100%;
+	height: 6px;
+	background: $thix-color;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.resume::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+@keyframes circle {
+	from {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 0 0 $main-color;
+	}
+	to {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 0 6px rgba(61, 64, 91, 0);
+	}
+}
