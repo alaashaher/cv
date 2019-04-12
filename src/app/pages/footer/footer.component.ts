@@ -5,6 +5,11 @@ import { Component } from '@angular/core';
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.scss']
 })
-export class footerComponent {
-
+export class FooterComponent {
+    Contact = {
+        tele: '+201024513379',
+        location: 'egypt, benha',
+        email: 'alaashaher12@gmail.com',
+        code: 'codepen.io/alaa_shaher'
+    };
 }

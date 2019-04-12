@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { footerComponent } from './footer.component';
+import { FooterComponent } from './footer.component';
 
 @NgModule({
   declarations: [
-    footerComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
   ],
   providers: [],
-  exports: [footerComponent]
+  exports: [FooterComponent]
 })
 export class FooterModule { }

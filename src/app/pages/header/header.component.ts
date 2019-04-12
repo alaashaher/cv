@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+    info = {
+        name: 'Alaa Shaher',
+        job: 'Front-end Web Develper',
+        about: 'I\'am Front-end Develper, have good exprince, keeping learning more tool'
+    };
 }
