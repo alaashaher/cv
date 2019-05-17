@@ -11,14 +11,14 @@ export class AppComponent {
   constructor(
     private router: Router
   ) {
-
+    // this.CheckRouting('');
   }
-  CheckRouting(RouterLocation) {
-    if (RouterLocation === '' || RouterLocation === '#/') {
-      this.router.navigate(['HeaderComponent']);
-    } else {
-      this.router.navigate([RouterLocation.replace('#/', '')]);
-      this.router.navigate(['HeaderComponent']);
-    }
-  }
+  // CheckRouting(RouterLocation) {
+  //   if (RouterLocation === '' || RouterLocation === '#/') {
+  //     this.router.navigate(['HeaderComponent']);
+  //   } else {
+  //     this.router.navigate([RouterLocation.replace('#/', '')]);
+  //     this.router.navigate(['HeaderComponent']);
+  //   }
+  // }
 }

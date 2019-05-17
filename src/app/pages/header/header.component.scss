@@ -130,3 +130,18 @@ h3 {
 
 
 }
+
+nav {
+  background-color: #3e4633;
+
+  ul {
+    display: inline-flex;
+    a {
+      padding: 10px 20px;
+      color: #fff;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
